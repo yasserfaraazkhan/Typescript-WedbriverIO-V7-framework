@@ -73,7 +73,7 @@ Choose one of the following options:
 
 6. Once you are finished, create a PR with the Subject (First and Last name Initial-AscendumExam Final). For Example: `IO-AscendumExam Final` and add the following
 
-    - Add @ianoroceo as Reviewer
+    - Add @ianoroceo and @alipascendum as Reviewer
     - Assign the PR to yourself
     - Add Label `DO NOT MERGE`
     - Add a descriptive comment description for the PR
