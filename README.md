@@ -29,7 +29,7 @@ Choose one of the following options:
 
 3. Install your favorite IDE. I used [VS Code](https://code.visualstudio.com/download) for this.
 
-4. Clone the git repo — `https://github.com/ianoroceo/ag-grid`.
+4. Clone the git repo — `https://github.com/vora/eqa-UI-exam`.
 
 5. Create `.env` file and add
 
@@ -96,7 +96,7 @@ Choose one of the following options:
         - [ ] Has ReadMe.md been updated, if required?
         ```
 
-    > Reminder: ONLY create a PR if you are sure you have completed the Exam. Please see [sample PR](https://github.com/ianoroceo/ag-grid/pull/1) as reference
+    > Reminder: ONLY create a PR if you are sure you have completed the Exam. Please see [sample PR](https://github.com/vora/eqa-UI-exam/pull/1) as reference
 
 ***
 
