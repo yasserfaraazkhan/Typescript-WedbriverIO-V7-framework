@@ -73,6 +73,10 @@ Choose one of the following options:
 
 6. Invite @alipascendum and @ianoroceo to the forked project repo. Please see instructions on how to invite people in your Github Repo - https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository
 
+7. There's a protected worksheet to do a self Assessment of your work. Please refer to this [spreadsheet](docs/Self-Assessment.xlsx). Please take note of the definitions of which are Completed, Partially Completed and Not Completed.
+
+![self-assessment](./docs/self-assessment.png)
+
 ***
 
 ## Tests to be built
