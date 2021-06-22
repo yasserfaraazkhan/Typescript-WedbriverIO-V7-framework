@@ -29,7 +29,7 @@ Choose one of the following options:
 
 3. Install your favorite IDE. I used [VS Code](https://code.visualstudio.com/download) for this.
 
-4. Clone the git repo — `https://github.com/ianoroceo/ag-grid`.
+4. Clone the git repo — `https://github.com/vora/eqa-UI-exam`.
 
 5. Create `.env` file and add
 
