@@ -1,26 +1,21 @@
-name: Main
-
+name: CI
 on: [push, pull_request]
-
-
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
-    container:
-      image: selenium/standalone-chrome:91.0-chromedriver-91.0
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14.15.0
-      - name: Install dependencies
-        run: npm i
-      - name: Test
-        run: npm run test
-      - name: Upload artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: artifact
-          path: package.tgz
+        - name: Checkout
+          uses: actions/checkout@v2
+        - name: Install
+          uses: ianwalter/puppeteer@main
+          with:
+            args: npm install
+        - name: Test
+          uses: ianwalter/puppeteer@main
+          with:
+            args: npm run test
+        - uses: actions/upload-artifact@v1
+          if: failure()
+          with:
+            name: logs
+            path: logs
