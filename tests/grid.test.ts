@@ -50,7 +50,7 @@ describe("Load AG Grid", () => {
     GridPage.unselectAllColumnOptions.getAllSecondaryOptionNames.forEach(
       (columnName) => {
         GridPage.secondaryColumnOptions(columnName).click();
-        expect(GridPage.secondaryColumnHeader.getText()).to.eql(columnName);
+        expect(GridPage.mainGrigColumnHeader.getText()).to.eql(columnName);
         GridPage.secondaryColumnOptions(columnName).click();
       }
     );
@@ -63,11 +63,11 @@ describe("Load AG Grid", () => {
   namesToSearch.forEach((name) => {
     it(`Should validate filtering ${name}`, () => {
       GridPage.unselectAllColumnOptions
-        .selectColumnToDisplay("Name")
-        .enterSearchNameInFilter(name)
-        .waitForElementTohaveText(name)
+        .selectColumnToDisplay("Name") // select from column options
+        .enterSearchNameInFilter(name) // Enter name in main grid filter
+        .waitForElementTohaveText(name) // waiting for 1st cell to have text
         .cellLocators.forEach((el) => {
-          expect(el.getText()).to.contains(name);
+          expect(el.getText()).to.contains(name); // verifying each cell has searched text
         });
     });
   });
@@ -78,16 +78,15 @@ describe("Load AG Grid", () => {
    */
   monthlyBreakdown.forEach((price) => {
     it(`Should validate that Winnings in October is less than ${price}`, () => {
-      // const amount = "5000";
       const filterBy = "Less than";
       const columnToSelect = "Oct";
 
       GridPage.unselectAllColumnOptions
-        .selectColumnToDisplay(columnToSelect)
-        .enterSearchOctInFilter(price)
+        .selectColumnToDisplay(columnToSelect) // select from column options
+        .enterSearchOctInFilter(price) // Enter price in main grid filter
         .clickOnFilter.filterPopupTextField(price)
         .selectOptionFromDropdown(filterBy)
-        .popupFilterTextField.click();
+        .popupFilterTextField.click(); // collapse filter modal
       GridPage.cellLocators.forEach((el) => {
         expect(GridPage.getSanitizedNumber(el.getText())).to.be.lessThan(
           parseInt(price)
@@ -118,7 +117,7 @@ describe("Load AG Grid", () => {
    * Setting the rating at first and
    * selecting other column to display
    */
-  it("Should validate filtering", () => {
+  it("Should validate filtering rating  2 and 4 is displayed", () => {
     const columnToDisplay = [
       "Name",
       "Country",
@@ -138,5 +137,9 @@ describe("Load AG Grid", () => {
     columnToDisplay.forEach((columnName) =>
       GridPage.selectColumnToDisplay(columnName)
     );
+    GridPage.ratingColumnValues.forEach((el) => { // iterating over rating column cell values
+      if (el.$$('img').length != 0)
+        expect(el.$$('img').length).that.is.oneOf([2, 4]); // asserting the STARS img displayed are either 2 or 4
+    })
   });
 });

@@ -9,6 +9,10 @@ export class GridPage {
     return $('[ref="eRootWrapper"] .ag-side-bar');
   }
 
+  public static get ratingColumnValues() {
+    return $$('[col-id=rating]');
+  }
+
   public static get gridContainer() {
     return $(
       '[ref="eRootWrapper"] > .ag-root-wrapper-body [ref="eCenterContainer"]'
@@ -26,7 +30,7 @@ export class GridPage {
   public static get columnHeader() {
     return $$('[aria-rowindex="1"] > [role="columnheader"]');
   }
-  public static get secondaryColumnHeader() {
+  public static get mainGrigColumnHeader() {
     return $('[aria-rowindex="2"] [col-id]');
   }
 
