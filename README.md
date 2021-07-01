@@ -1,4 +1,4 @@
-# Running Test on Ag-Grid using WebdriverIO
+# Typescript WedbriverIO V7 automation framework
 
 Repo for UI Automaton using WebdriverIO with Mocha and Chai.
 Web Automation Testing with Mocha and Chai, WebdriverIO V6 using Page Object Model
