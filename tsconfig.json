@@ -8,7 +8,7 @@
       "removeComments": true,
       "noImplicitAny": false,
       "outDir": "src",
-      "types": ["node", "@wdio/sync", "mocha", "chai-string"],
+      "types": ["node", "mocha", "@wdio/mocha-framework", "webdriverio/sync"],
       "sourceMap": true,
       "resolveJsonModule": true,
       "esModuleInterop": true,

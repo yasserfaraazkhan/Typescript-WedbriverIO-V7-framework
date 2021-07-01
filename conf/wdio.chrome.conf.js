@@ -6,7 +6,7 @@ const overrides = {
     {
       browserName: "chrome",
       "goog:chromeOptions": {
-        args: ["--disable-infobars", "--incognito"],
+        args: ["--disable-infobars", "--incognito", "headless"],
       },
     },
   ],
