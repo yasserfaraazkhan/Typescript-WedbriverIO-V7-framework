@@ -26,7 +26,7 @@
   "dependencies": {
     "@rpii/wdio-html-reporter": "^7.7.1",
     "@rpii/wdio-report-events": "^0.1.3",
-    "@types/chai": "^4.2.19",
+    "@types/chai": "^4.2.21",
     "@types/chai-string": "^1.4.2",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
