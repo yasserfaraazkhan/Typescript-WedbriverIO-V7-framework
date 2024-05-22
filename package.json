@@ -47,7 +47,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
     "handlebars": "^4.7.7",
-    "jscodeshift": "^0.13.0",
+    "jscodeshift": "^0.14.0",
     "lodash": "^4.17.21",
     "log4j": "^1.0.0",
     "log4js": "^6.3.0",
